@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  
+  <!-- 1. This loads the Supabase library into the website -->
+  <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+  <h1>The Librarians - Database Connection Test</h1>
+  <p>Open your browser console (F12) to see if the connection works.</p>
+
+  <script>
+    // 2. These are our unique project configuration keys
+    const SUPABASE_URL = "https://supabase.co";
+    const SUPABASE_ANON_KEY = "sb_publishable_dZMs9NIBg6Vs1oL4jSktMw__983CRFf";
+    
+    // 3. This initializes the connection client
+    const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    // 4. Simple test function to fetch books from the database
+    async function testConnection() {
+      const { data, error } = await supabase.from('books').select('*');
+      if (error) {
+        console.error('Connection failed:', error.message);
+      } else {
+        console.log('Successfully connected to Supabase! Current database items:', data);
+      }
+    }
+
+    // Run the test function automatically when the page loads
+    testConnection();
+  </script>
+</body>
+</html>
