@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Space | We value your reading space</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="brand">
+      <a class="logo" href="#choose" aria-label="Read Space home">
+        <span class="logo-big">R</span><span class="logo-dark">ead</span>
+        <span class="logo-light">Space</span>
+      </a>
+      <div class="tagline-row">
+        <span class="accent-line"></span>
+        <p class="tagline">We value your Reading Space</p>
+      </div>
+    </header>
+
+    <main class="card-wrap">
+
+      <span class="deco deco-closed" aria-hidden="true">&#128215;</span>
+      <span class="deco deco-open-top" aria-hidden="true">&#128214;</span>
+      <span class="deco deco-open-bottom" aria-hidden="true">&#128214;</span>
+
+      <section id="choose" class="view card">
+        <h2 class="card-title">Welcome!</h2>
+        <p class="card-subtitle">Please select your account type</p>
+
+        <div class="btn-row">
+          <a class="btn btn-dark" href="#login-librarian">Librarian</a>
+          <a class="btn btn-light" href="#login-user">Student</a>
+        </div>
+
+        <p class="switch-text">
+          Don't have an account yet?
+          <a href="#register">Register Now</a>
+        </p>
+      </section>
+
+      <section id="login-user" class="view card">
+        <h2 class="card-title">Login as a User</h2>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="user-email">Email</label>
+            <input type="email" id="user-email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="user-password">Password</label>
+            <input type="password" id="user-password" name="password" required>
+          </div>
+
+          <div class="btn-center">
+            <button type="submit" class="btn btn-light">Login</button>
+          </div>
+        </form>
+
+        <p class="switch-text">
+          Don't have an account yet?
+          <a href="#register">Register Now</a>
+        </p>
+        <p class="back-link"><a href="#choose">&larr; Back to account type</a></p>
+      </section>
+
+      <section id="login-librarian" class="view card">
+        <h2 class="card-title">Login as a Librarian</h2>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="lib-email">Email</label>
+            <input type="email" id="lib-email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="lib-password">Password</label>
+            <input type="password" id="lib-password" name="password" required>
+          </div>
+
+          <div class="btn-center">
+            <button type="submit" class="btn btn-light">Login</button>
+          </div>
+        </form>
+
+        <p class="switch-text">
+          Don't have an account yet?
+          <a href="#register">Register Now</a>
+        </p>
+        <p class="back-link"><a href="#choose">&larr; Back to account type</a></p>
+      </section>
+
+      <section id="register" class="view card">
+        <h2 class="card-title">Create your account</h2>
+
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="reg-type">Account Type:</label>
+            <select id="reg-type" name="account_type" required>
+              <option value="" disabled selected>Select your account</option>
+              <option value="user">User</option>
+              <option value="librarian">Librarian</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="reg-first">First Name</label>
+            <input type="text" id="reg-first" name="first_name" required>
+          </div>
+
+          <div class="field">
+            <label for="reg-last">Last Name</label>
+            <input type="text" id="reg-last" name="last_name" required>
+          </div>
+
+          <div class="field">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" name="email" required>
+          </div>
+
+          <div class="field">
+            <label for="reg-password">Password</label>
+            <input type="password" id="reg-password" name="password" required>
+          </div>
+
+          <div class="field">
+            <label for="reg-confirm">Confirm Password</label>
+            <input type="password" id="reg-confirm" name="confirm_password" required>
+          </div>
+
+          <div class="btn-end">
+            <button type="submit" class="btn btn-light">Register</button>
+          </div>
+        </form>
+
+        <p class="switch-text">
+          Already have an account?
+          <a href="#login-user">Login Now</a>
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+</body>
+</html>
